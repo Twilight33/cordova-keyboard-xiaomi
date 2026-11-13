@@ -1,0 +1,77 @@
+:root {
+    color-scheme: light;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #172033;
+    background: #f4f6fa;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-width: 280px;
+    min-height: 100vh;
+    margin: 0;
+    padding: max(24px, env(safe-area-inset-top)) 18px max(24px, env(safe-area-inset-bottom));
+    background: radial-gradient(ellipse at 50% 0%, #e5edff 0, #f4f6fa 48%, #f4f6fa 100%);
+}
+
+.shell { width: min(100%, 520px); margin: 0 auto; }
+.header { padding: 28px 4px 24px; }
+.eyebrow { color: #5269a5; font-size: 11px; font-weight: 750; letter-spacing: .14em; }
+h1 { margin: 10px 0 8px; font-size: clamp(29px, 8vw, 38px); letter-spacing: -.04em; }
+.intro { margin: 0; color: #5e687b; font-size: 15px; line-height: 1.55; }
+
+.panel, .metric-card {
+    border: 1px solid #e4e8f0;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, .92);
+    box-shadow: 0 12px 32px rgba(32, 48, 80, .06);
+}
+
+.panel { padding: 20px; }
+label { display: block; margin-bottom: 10px; font-size: 14px; font-weight: 700; }
+input {
+    width: 100%;
+    min-height: 54px;
+    padding: 0 15px;
+    border: 1.5px solid #cbd4e4;
+    border-radius: 12px;
+    outline: none;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+    font-size: 16px;
+    transition: border-color .15s, box-shadow .15s;
+}
+input:focus { border-color: #4268d5; box-shadow: 0 0 0 4px rgba(66, 104, 213, .13); }
+input::placeholder { color: #929bad; }
+.hint { margin: 12px 0 0; color: #69758a; font-size: 13px; line-height: 1.5; }
+
+.metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.metric-card { display: flex; min-height: 92px; flex-direction: column; justify-content: center; padding: 15px 18px; }
+.metric-label { color: #69758a; font-size: 12px; font-weight: 650; }
+.metric-card strong { margin-top: 5px; font-size: 27px; letter-spacing: -.04em; }
+.status { min-height: 24px; margin: 16px 2px 8px; color: #5269a5; font-size: 13px; }
+
+button {
+    width: 100%;
+    min-height: 48px;
+    border: 0;
+    border-radius: 12px;
+    background: #233b78;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+}
+button:active { background: #192e62; }
+button:focus-visible { outline: 3px solid #87a2f5; outline-offset: 3px; }
+
+footer { display: grid; gap: 6px; margin: 18px 4px 0; color: #7a8495; font-size: 11px; line-height: 1.5; }
+
+@media (min-height: 760px) {
+    .header { padding-top: 56px; }
+}

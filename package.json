@@ -1,0 +1,22 @@
+{
+  "name": "org.example.keyboardbackrepro",
+  "displayName": "Keyboard Back Repro",
+  "version": "1.0.0",
+  "description": "Minimal Android keyboard and back-button reproduction app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "cordova-android": "15.1.0"
+  },
+  "cordova": {
+    "platforms": [
+      "android"
+    ]
+  }
+}

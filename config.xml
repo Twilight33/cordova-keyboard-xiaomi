@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.example.keyboardbackrepro" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Keyboard Back Repro</name>
+    <description>Minimal Android keyboard and back-button reproduction app.</description>
+    <author>Unbranded reproduction sample</author>
+    <content src="index.html" />
+    <preference name="android-targetSdkVersion" value="36" />
+    <preference name="AndroidEdgeToEdge" value="true" />
+</widget>

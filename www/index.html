@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#f4f6fa">
+    <title>Keyboard Back Repro</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <main class="shell">
+        <header class="header">
+            <span class="eyebrow">CORDOVA ANDROID TEST</span>
+            <h1>Keyboard + Back</h1>
+            <p class="intro">Focus the field, then press your phone’s Back button once.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="input-label">
+            <label id="input-label" for="test-input">Keyboard test input</label>
+            <input id="test-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Tap here to open the keyboard">
+            <p class="hint">Expected: the keyboard closes and the app stays on the same view.</p>
+        </section>
+
+        <section class="metrics" aria-label="Back event results" aria-live="polite">
+            <article class="metric-card">
+                <span class="metric-label">Back events</span>
+                <strong id="back-count">0</strong>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Demo view</span>
+                <strong id="view-level">3 / 3</strong>
+            </article>
+        </section>
+
+        <p id="status" class="status" role="status">Waiting for Cordova…</p>
+        <button id="reset-button" type="button">Reset test</button>
+
+        <footer>
+            <span id="runtime">Cordova runtime not ready</span>
+            <span>Each Back event moves the demo view back one level.</span>
+        </footer>
+    </main>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
