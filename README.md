@@ -1,6 +1,10 @@
 # Keyboard Back Repro
 
-A minimal, offline Cordova Android app for checking how a Xiaomi device handles Back while the soft keyboard is open. It uses no third-party Cordova plugins and contains no personal or project-owner-specific organization data.
+## Issue
+
+On a Xiaomi device, pressing the system Back button or gesture while the soft keyboard is open can also deliver a Cordova `backbutton` event to the app. In the observed test, the keyboard closes and the app receives one event; on other tested phones, the keyboard closes without a Cordova event. This project is a minimal reproduction for comparing that behavior across devices.
+
+The demo displays a `backbutton` event counter and a simulated view level, making it easy to see whether a keyboard-dismiss press was also delivered to the app. The simulated view level does not perform real page navigation.
 
 ## Project profile
 
@@ -45,4 +49,3 @@ Expected for the keyboard-first press: the keyboard closes, **Back events** rema
 - Whether the behavior reproduces on another device or emulator
 - Logcat output around the reproduction, after reviewing it for private information
 
-The app has no network calls, analytics, credentials, or company-specific code. Do not include personal data in the test input or in issue attachments.
